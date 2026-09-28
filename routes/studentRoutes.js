@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
 
   if (isNaN(id)) {
     return res.status(400).json({
-      message: "Invalid Input",
+      message: "Wrong Input",
       error: "Student ID must be a valid number."
     });
   }
@@ -84,7 +84,7 @@ router.put('/:id', (req, res) => {
 
   if (isNaN(id)) {
     return res.status(400).json({
-      message: "Invalid Input",
+      message: "Wrong Input",
       error: "Student ID must be a valid number."
     });
   }
@@ -101,7 +101,7 @@ router.put('/:id', (req, res) => {
 
   if (name === undefined && course === undefined) {
     return res.status(400).json({
-      message: "Invalid Input",
+      message: "Wrong Input",
       error: "At least one field ('name' or 'course') is required to update."
     });
   }
@@ -109,7 +109,7 @@ router.put('/:id', (req, res) => {
   if (name !== undefined) {
     if (typeof name !== 'string' || !name.trim()) {
       return res.status(400).json({
-        message: "Invalid Input",
+        message: "Wrong Input",
         error: "'name' must be a non-empty string."
       });
     }
@@ -119,7 +119,7 @@ router.put('/:id', (req, res) => {
   if (course !== undefined) {
     if (typeof course !== 'string' || !course.trim()) {
       return res.status(400).json({
-        message: "Invalid Input",
+        message: "Wrong Input",
         error: "'course' must be a non-empty string."
       });
     }
@@ -143,7 +143,7 @@ router.delete('/:id', (req, res) => {
 
   if (isNaN(id)) {
     return res.status(400).json({
-      message: "Invalid Input",
+      message: "Wrong Input",
       error: "Student ID must be a valid number."
     });
   }

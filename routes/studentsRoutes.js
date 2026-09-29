@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const students = require('../data/students');
+const students = require('../data/student');
 
 /**
  * @route   GET /students

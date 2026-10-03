@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const students = require('../data/student');
-
+const students = require('../data/Students');
 /**
  * @route   GET /students
  * @desc    View all students
